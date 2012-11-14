@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>Frontend.sg</title>
+
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+	<link href="styles/prettify.css" type="text/css" rel="stylesheet" />
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="styles/neon.css">
+
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+
+	<!-- Required Modernizr file -->
+	<script src="modernizr.custom.js"></script>
+</head>
+<body class="deck-container" onload="prettyPrint()">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide" id="home">
+	<h2>Front-end Developers Singapore User group</h2>
+
+	<h3>What's on tonights</h3>
+
+	<ul>
+		<li>
+			<h4>What is this user group?</h4>
+		</li>
+		<li>
+			<h6>DRY CSS with Sass</h6>
+		</li>
+		<li>
+			<h6>CSS Animations</h6>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="intro">
+	<h1><strong class="slide slide-next" id="a">Don't Repeat Your CSS</strong>DRY CSS with SASS<span>Vinay M, <a href="http://artminister.com">www.artminister.com</a></span></h1>
+
+</section>
+
+<section class="slide">
+	<h2>Who am I?</h2>
+
+	<div class="row">
+		<div class="columns six">
+			Photo
+		</div>
+		<div class="columns six">
+			<h3>Vinay</h3>
+			<p>Front-end developer at Artminister.com</p>
+		</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Syntanctically awesome stylesheets (Sass)</h2>
+
+	<h3>Why Sass.</h3>
+	<ul>
+		<li>Faster to write than normal CSS</li>
+		<li>DRY</li>
+		<li>Browser prefixes</li>
+		<li>Mininal and Maintainable code</li>
+	</ul>
+
+	<h3>Supports</h3>
+	<ul>
+		<li>Nesting</li>
+		<li>Variables</li>
+		<li>Mixins</li>
+		<li>Extends</li>
+		<li>Functions &amp; Operations</li>
+	</ul>
+
+</section>
+
+<section class="slide">
+	<h2>Getting Started</h2>
+<p>Sass is dependent on Ruby.</p>
+	<h3>Installing Sass (Command Line)</h3>
+
+	<pre><code>$ gem install sass --pre // 3.2 alpha
+$ sass --watch your_sass_directory
+</code></pre>
+
+<p>SASS compiler apps: No ruby or command line knowledge required</p>
+<hr>
+<h3>Code Kit</h3>
+<p>
+	<a href="http://incident57.com/codekit/">http://incident57.com/codekit/</a>
+</p>
+
+	<h3>On Windows</h3>
+
+	<p>Scout APP
+		<a href="http://mhs.github.com/scout-app/">http://mhs.github.com/scout-app/</a>
+	</p>
+
+</section>
+
+<section class="slide">
+	<h2>Compass</h2>
+
+	<p>A CSS Authoring framework, with tons of CSS3, typography and styling <em>mixins</em></p>
+
+	<pre><code>$ gem install compass
+</code></pre>
+
+<h2>Livereload</h2>
+
+<p>Monitors changes in file system and refreshes the browser</p>
+<p>
+	<a href="http://livereload.com">http://livereload.com</a>
+</p>
+</section>
+
+<section class="slide">
+
+	<h2>2 Syntax - Sass &amp; Scss</h2>
+
+	<div class="row">
+		<div class="columns four">
+			<h3>SASS</h3>
+
+			<pre><code class="prettyprint lang-css">.module
+  color: #333
+  font-weight: 500
+  background: #fff
+  border: 1px #ccc solid
+
+.sidebar
+  @extend .module
+  color: #000
+
+
+</code></pre>
+		</div>
+		<div class="columns four">
+			<h3>SCSS</h3>
+
+			<pre><code class="prettyprint lang-css">.module{
+  color: #333;
+  font-weight: 500;
+  background: #fff;
+  border: 1px #ccc solid;
+}
+
+.sidebar{
+  @extend .module;
+  color: #000;
+}
+</code></pre>
+		</div>
+		<div class="columns four">
+			<h3>CSS Output</h3>
+
+			<pre><code class="prettyprint lang-css">.module, .sidebar{
+  color: #333;
+  font-weight: 500;
+  background: #fff;
+  border: 1px #ccc solid;
+}
+
+.sidebar{
+  color: #000;
+}
+
+</code></pre>
+		</div>
+	</div>
+
+<ol>
+	<li>Sass syntax uses indentation to indicate nesting of selectors</li>
+	<li>Scss uses standards CSS syntax with brackets, semicolons</li>
+</ol>
+
+</section>
+
+<section class="slide">
+	<h2>Variables</h2>
+
+	
+		
+<pre><code class="prettyprint lang-css">$link-color: blue; 			
+$site-width: 960px;
+$min-site-width: 768px;
+$max-site-width: 1040px;
+$column-spacing: 20px;
+
+.container{
+  width: $site-width;
+  max-width: $max-site-width;
+  min-width: $min-site-width;	
+}
+
+.sidebar a{
+  color: $link-color
+}	
+</code>
+	</pre>
+
+</section>
+
+<section class="slide">
+	<h2>Nesting</h2>
+
+	<div class="row">
+		<div class="columns six">
+			<h3>Scss</h3>
+			<pre><code class="prettyprint">.module{
+  a{
+    color: white;
+    background: red;
+    display:inline-block;
+
+    /* Pseudo Hover */
+
+    &:hover{
+      color:red;
+      background: white;
+    }
+
+    /* Target Links with class bullet */
+
+    &.bullet{
+      display: list-item;
+      list-style: disc inside;
+    }    
+  }
+
+  /* IE 7 Fix */
+
+  .lt-ie8 &{
+    zoom: 1;
+  }
+}	
+</code>
+</pre>
+		</div>
+		<div class="columns six">
+			<h3>Css</h3>
+				<pre><code class="prettyprint">.module a {
+  color: white;
+  background: red;
+  display: inline-block;
+}  
+
+/* Pseudo Hover */  
+
+.module a:hover {
+  color: red;
+  background: white; 
+}
+
+/* Target Links with class bullet */ 
+
+.module a.bullet {
+    display: list-item;
+    list-style: disc inside; 
+}
+
+/* IE 7 Fix */
+
+.lt-ie8 .module {
+  zoom: 1;
+}
+
+	
+</code>
+</pre>
+		</div>
+	</div>
+
+
+</section>
+
+<section class="slide">
+	<h2>Media Queries</h2>
+
+	<div class="row">
+		<div class="columns six">
+			<h3>Scss</h3>
+			<pre><code class="prettyprint">.module{
+  
+  width: 500px;
+  float: left;
+
+  /* Mobile */
+
+  @media only screen and (min-width: 480px){
+    width: auto;
+    float: none;
+  } 
+}
+</code></pre>
+		</div>
+		<div class="columns six">
+			<h3>CSS</h3>
+			<pre><code class="prettyprint">.module{
+  width: 500px;
+  float: left;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 480px){
+ .module{
+   width: auto;
+   float: none;
+  }
+}
+</code></pre>
+		</div>
+	</div>
+	
+</section>
+
+<!-- Mixins -->
+<section class="slide">
+	<h2>Mixins</h2>
+  
+  <div class="row">
+  	<div class="columns six">
+
+  		<h3>Scss</h3>
+
+  		<pre><code class="prettyprint">/* Border radius Mixin */
+
+.border-radius($radius: 10px){
+
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+
+}
+
+/* My Module */
+
+.module{
+  @include border-radius(5px);
+}
+
+</code></pre>
+  		
+  	</div>
+  	<div class="columns six">
+  		<h3>CSS</h3>
+  		<pre><code class="prettyprint">/* My Module */
+
+.module{
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+}
+</code></pre>
+  	</div>
+  </div>
+
+</section>
+<!-- / Mixins -->
+
+<section class="slide">
+	<h2>Extend</h2>
+
+	<div class="row">
+  	<div class="columns six">
+
+  		<h3>Scss</h3>
+
+  		<pre><code class="prettyprint">/* Error */
+
+.bordered_box{ 
+  border: 1px #ccc solid;
+  padding: 10px;
+}  			
+
+.module{
+  @extend .bordered_box;
+  border-color: red;
+}
+  	</code></pre>
+  	</div>
+
+  	<div class="columns six">
+  		<h3>CSS</h3>
+  		<pre><code class="prettyprint">/* Error */
+
+.bordered_box, .module {
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+
+.module {
+  border-color: red;
+}
+</code></pre>
+  	</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Silent Extend</h2>
+
+	<div class="row">
+  	<div class="columns six">
+
+  		<h3>Scss</h3>
+
+  		<pre><code class="prettyprint">/* Error */
+
+/* Presentational markup */
+
+%bordered_box{ 
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+
+/*  - Presentational markup */
+
+.module{
+  @extend %bordered_box;
+  border-color: red;
+}
+  	</code></pre>
+  	</div>
+
+  	<div class="columns six">
+  		<h3>CSS</h3>
+  		<pre><code class="prettyprint">/* Error */
+
+.module {
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+
+.module {
+  border-color: red;
+}
+</code></pre>
+  	</div>
+	</div>
+</section>
+
+<!--
+<section class="slide">
+	<h2>Sass 3.2 Whats New !!</h2>
+
+	<ul>
+		<li>CSS 4 Selectors Support</li>
+		<li>Nested support for @media, @document, @supports, @keyframes
+			<pre><code class="prettyprint">.module{
+  @supports (display:flexbox){
+    display: flex;    
+  }
+}</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Debugging SASS</h2>
+
+	<h3>Install Chrome Canary</h3>
+
+
+</section>
+-->
+
+<section class="slide">
+	<h2>Sass Goodies</h2>
+
+	<ul>
+		<li>
+			<h3>HTML Frameworks</h3>
+			<ul>
+				<li>Foundation Zurb</li>
+			</ul>
+		</li>
+		<li>
+			<h3>Responsive Grids</h3>
+
+			Susy
+		</li>
+		<li>
+			Sassy Buttons
+		</li>
+	</ul>
+
+
+</section>
+
+<section class="slide">
+	<h2>Folder Structure</h2>
+
+
+	<h2>Imports &amp; Partials</h2>
+
+	<ul>
+		<li>CSS @imports - http requests</li>
+		<li>Sass @imports - imports files while processing</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Sass vs LESS</h2>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+<script src="scripts/prettify.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
