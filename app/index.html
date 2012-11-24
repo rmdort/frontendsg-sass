@@ -34,10 +34,10 @@
 
 <section class="slide" id="home">
 	
-	<br><br>
+	
 
 <div class="logo">
-	<h1>Front <span>End</span> <em>Developers</em></h1>
+	<h1 class="zoomin"><div class="swing">Front <span>End</span></div> <em>Developers</em> <b>Singapore</b></h1>
 </div>
 
 	<!--<img src="images/front-end-logo.png" width="500" alt="">-->
@@ -53,15 +53,39 @@
 			<h6>CSS Animations - Shiaw Uen</h6>
 		</li>
 		<li>
+		  <h6>The current state of HTML5 games - Michal Budzynski</h6>
+		</li>
+		<li>
 			<h6>Lightning Talk - Lakshan Perera</h6>
 		</li>
 	</ul>
 
 	</div>
+	
+  <foot>
+    <a href="http://frontend.sg">http://frontend.sg</a>
+    <a href="http://twitter.com/frontendsg">@frontendsg</a>
+  </foot>
+</section>
+
+<section class="slide">
+  <h2>FEDS</h2>
+  
+  <ul>
+    <li>Monthly Meetups</li>
+    <li>Sharing Sessions + Talks</li>
+    <li>Open to all who are interested in front-end technology
+      <ul>
+        <li>Front-end & Back-end Developers</li>
+        <li>UI/UX Designers</li>        
+        <li>.....</li>
+      </ul>
+      </li>
+  </ul>
 </section>
 
 <section class="slide" id="intro">
-	<h1><strong class="slide slide-next" id="a">Don't Repeat Your CSS</strong>DRY CSS with SASS<span>Vinay M, <a href="http://artminister.com">www.artminister.com</a></span></h1>
+	<h1><strong class="slide slide-next" id="a">Don't Repeat Your CSS</strong>DRY CSS with Sass<span>Vinay M, <a href="http://artminister.com">www.artminister.com</a></span></h1>
 
 </section>
 
@@ -75,29 +99,61 @@
 		<div class="columns six">
 			<h3>Vinay</h3>
 			<p>Front-end developer at Artminister.com</p>
+			
+			<ul>
+			 <li>8 years of FED experience</li>
+			</ul>
 		</div>
 	</div>
 </section>
 
+<sections class="slide">
+  <h2>Whats wrong with CSS?</h2>
+  
+  <div class="row">
+    <div class="columns three">
+      <ul>    
+        <li>Copy/Paste and Repetitions</li>
+        <li>Lack of good Moduralization</li>    
+        <li>A big Pile of mess</li>
+      </ul>
+    </div>
+    <div class="columns nine">
+      <img src="https://www.shoeboxed.com/blog/wp-content/uploads/2012/10/messy-desk1.jpg" alt="" class="slide" style="height: 900px;">
+    </div>
+  </div>
+  
+  
+  
+</sections>
+
 <section class="slide">
 	<h2>Syntanctically awesome stylesheets (Sass)</h2>
+  
+  <div class="row">
+    <div class="columns four">
+      <h3>Why Sass.</h3>
+    	<ul>
+    		<li>Faster to write than normal CSS</li>
+    		<li>DRY</li>
+    		<li>Browser prefixes</li>
+    		<li>Mininal and Maintainable code</li>
+    	</ul>
 
-	<h3>Why Sass.</h3>
-	<ul>
-		<li>Faster to write than normal CSS</li>
-		<li>DRY</li>
-		<li>Browser prefixes</li>
-		<li>Mininal and Maintainable code</li>
-	</ul>
-
-	<h3>Supports</h3>
-	<ul>
-		<li>Nesting</li>
-		<li>Variables</li>
-		<li>Mixins</li>
-		<li>Extends</li>
-		<li>Functions &amp; Operations</li>
-	</ul>
+    	<h3>Supports</h3>
+    	<ul>
+    		<li>Nesting</li>
+    		<li>Variables</li>
+    		<li>Mixins</li>
+    		<li>Extends</li>
+    		<li>Functions &amp; Operations</li>
+    	</ul>
+    </div>
+    <div class="columns eight">
+      <img src="http://www.macaucabletv.com/wp-content/uploads/2012/03/FM-you_don_t_mess_with_the_zohan03.jpg" alt="" style="height:700px;" class="slide">
+    </div>
+  </div>
+	
 
 </section>
 
@@ -109,6 +165,7 @@
 	<pre><code>$ gem install sass --pre // 3.2 alpha
 $ sass --watch your_sass_directory
 </code></pre>
+
 
 <p>SASS compiler apps: No ruby or command line knowledge required</p>
 <hr>
@@ -128,9 +185,13 @@ $ sass --watch your_sass_directory
 <section class="slide">
 	<h2>Compass</h2>
 
-	<p>A CSS Authoring framework, with tons of CSS3, typography and styling <em>mixins</em></p>
+	<p>A CSS Authoring framework, with lots of CSS3, typography and styling <em>mixins</em></p>
 
-	<pre><code>$ gem install compass
+	<pre><code class="prettyprint">$ gem install compass
+
+// In your sass file 
+
+@import "compass"	  
 </code></pre>
 
 <h2>Livereload</h2>
@@ -143,11 +204,11 @@ $ sass --watch your_sass_directory
 
 <section class="slide">
 
-	<h2>2 Syntax - Sass &amp; Scss</h2>
+	<h2>Two Syntax - Sass &amp; Scss</h2>
 
 	<div class="row">
 		<div class="columns four">
-			<h3>SASS</h3>
+			<h3>SASS (.sass)</h3>
 
 			<pre><code class="prettyprint lang-css">.module
   color: #333
@@ -163,7 +224,7 @@ $ sass --watch your_sass_directory
 </code></pre>
 		</div>
 		<div class="columns four">
-			<h3>SCSS</h3>
+			<h3>SCSS (.scss)</h3>
 
 			<pre><code class="prettyprint lang-css">.module{
   color: #333;
@@ -179,7 +240,7 @@ $ sass --watch your_sass_directory
 </code></pre>
 		</div>
 		<div class="columns four">
-			<h3>CSS Output</h3>
+			<h3>CSS Output (.css)</h3>
 
 			<pre><code class="prettyprint lang-css">.module, .sidebar{
   color: #333;
@@ -351,7 +412,7 @@ $column-spacing: 20px;
 
   		<h3>Scss</h3>
 
-  		<pre><code class="prettyprint">/* Border radius Mixin */
+  		<pre><code class="prettyprint">/* REM Font-size */
 
 @mixin border-radius($radius: 10px){
 
@@ -369,6 +430,12 @@ $column-spacing: 20px;
   @include border-radius(0 5px 0 5px);
 }
 
+/* Footer */
+
+.footer{
+  @include border-radius(10px);
+}
+
 </code></pre>
   		
   	</div>
@@ -377,18 +444,69 @@ $column-spacing: 20px;
   		<pre><code class="prettyprint">/* My Module */
 
 .module{
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
+  border-radius: 0 5px 0 5px;
+  -moz-border-radius: 0 5px 0 5px;
+  -webkit-border-radius: 0 5px 0 5px;
+  -o-border-radius: 0 5px 0 5px;
+  -ms-border-radius: 0 5px 0 5px;
 }
+
+/* Footer */
+
+.footer{
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+}
+
 </code></pre>
   	</div>
   </div>
 
 </section>
 <!-- / Mixins -->
+
+<!-- Functions -->
+<section class="slide">
+	<h2>Functions</h2>
+  
+  <div class="row">
+  	<div class="columns six">
+
+  		<h3>Scss</h3>
+
+  		<pre><code class="prettyprint">/* Convert Pixels to REM (Given a base font size) */
+
+$base-font-size: 10px;
+
+@function pixel-to-rem($size: $base-font-size){  
+  @return $size/ ($base-font-size / 1rem);
+}
+
+/* Paragraph */
+
+p{  
+  font-size: pixel-to-rem(16px);
+}
+
+</code></pre>
+  		
+  	</div>
+  	<div class="columns six">
+  		<h3>CSS</h3>
+  		<pre><code class="prettyprint">/* Paragraph */
+
+p{
+  font-size: 1.6rem;
+}
+</code></pre>
+  	</div>
+  </div>
+
+</section>
+<!-- / Functions -->
 
 <section class="slide">
 	<h2>Extend</h2>
@@ -472,7 +590,7 @@ $column-spacing: 20px;
 	</div>
 </section>
 
-<!--
+
 <section class="slide">
 	<h2>Sass 3.2 Whats New !!</h2>
 
@@ -491,11 +609,11 @@ $column-spacing: 20px;
 <section class="slide">
 	<h2>Debugging SASS</h2>
 
-	<h3>Install Chrome Canary</h3>
+	<h3>Demo: Chrome Canary</h3>
 
 
 </section>
--->
+
 
 <section class="slide">
 	<h2>Sass Goodies</h2>

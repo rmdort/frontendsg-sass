@@ -185,20 +185,78 @@
 
 
 .logo{
-	h1{ font-size: 141px !important; color: #f95a1b !important; position: relative !important; left: auto!important; right: auto !important; top: auto !important; text-transform: uppercase !important; font-family:"Arial Black"; text-shadow:none !important; margin: 20px 0 0 0 !important; line-height: 1; padding: 0 !important; padding-top: 10px; transform: inherit !important;}
+  padding-top:30px !important; text-align:center;
+  
+  
+	h1{ font-size: 141px !important; color: #25afad !important; position: relative !important; left: auto!important; right: auto !important; top: auto !important; text-transform: uppercase !important; font-family:"Arial Black"; text-shadow:none !important; margin: 20px auto 0 auto !important; line-height: 1; padding: 0 !important; padding-top: 10px; -webkit-transform: translate(0,0) !important; letter-spacing:-10px !important; -webkit-transition: all 0.2s ease-in; display:inline-block; text-align:center; }
 
-	h1 > span{
-		color: #000;
+	h1  span{
+		color: #fff !important;
 		display: inline-block !important;
 		font-size: 96px !important;
-		margin-left: -80px;
+		margin-left: -60px;
+	}
+	
+	h1 > b{
+	  position:absolute;
+	  right:5px;
+	  top:22px;
+	  font-size: 25px !important;
+	  letter-spacing:-1px !important;
+	  color:#999;
 	}
 
 	h1 > em{
 		display: block;
 		font-style: normal;
-		font-size: 100px;
+		font-size: 95px;
+		margin-left:4px;
 		margin-top: -10px;
-		color: #fff
+		color: #777;
+		-webkit-text-stroke: 1px #999;
+		letter-spacing: -5px !important;
 	}
+}
+
+.slide foot{
+  position:fixed;
+  left:0;
+  bottom:0;
+  background:#222;
+  opacity:0.7;
+  padding:20px 50px;
+  -webkit-box-sizing: border-box;
+  width:100%;
+  
+  > a:last-child{
+    float:right;
+  }
+}
+
+.zoomin{
+  -webkit-animation: zoom 0.7s ease-out;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing {
+	20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; }
+	20% { -webkit-transform: rotate(1deg); }	
+	40% { -webkit-transform: rotate(-1deg); }
+	60% { -webkit-transform: rotate(0deg); }	
+	80% { -webkit-transform: rotate(-1deg); }	
+	100% { -webkit-transform: rotate(0deg); }
+}
+
+
+.swing {
+	-webkit-transform-origin: top center;
+	-webkit-animation: swing 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes zoom {
+  
+  0% {
+    -webkit-transform: scaleX(0) scaleY(0);
+  }
 }
