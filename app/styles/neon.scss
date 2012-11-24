@@ -249,14 +249,19 @@
 
 
 .swing {
-	-webkit-transform-origin: top center;
-	-webkit-animation: swing 2s ease-out;
-  -webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: top center;    
+  -webkit-animation-name: swing, zoom;
+  -webkit-animation-duration: 2s,0.7s;
+  -webkit-animation-iteration-count: infinite, 1;
 }
 
 @-webkit-keyframes zoom {
   
   0% {
     -webkit-transform: scaleX(0) scaleY(0);
+  }
+  
+  100% {
+    -webkit-transform: scaleX(1) scaleY(1);
   }
 }
