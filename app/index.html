@@ -33,21 +33,31 @@
 <!-- Begin slides. Just make elements with a class of slide. -->
 
 <section class="slide" id="home">
-	<h2>Front-end Developers Singapore User group</h2>
+	
+	<br><br>
 
-	<h3>What's on tonights</h3>
+<div class="logo">
+	<h1>Front <span>End</span> <em>Developers</em></h1>
+</div>
 
-	<ul>
+	<!--<img src="images/front-end-logo.png" width="500" alt="">-->
+	
+	<div style="width:50%; margin: 20px auto; ">
+	
+<h2 style="text-align:center;">What's on tonight!</h2>
+	<ul>		
 		<li>
-			<h4>What is this user group?</h4>
+			<h6>DRY CSS with Sass - Vinay M</h6>
 		</li>
 		<li>
-			<h6>DRY CSS with Sass</h6>
+			<h6>CSS Animations - Shiaw Uen</h6>
 		</li>
 		<li>
-			<h6>CSS Animations</h6>
+			<h6>Lightning Talk - Lakshan Perera</h6>
 		</li>
 	</ul>
+
+	</div>
 </section>
 
 <section class="slide" id="intro">
@@ -343,7 +353,7 @@ $column-spacing: 20px;
 
   		<pre><code class="prettyprint">/* Border radius Mixin */
 
-.border-radius($radius: 10px){
+@mixin border-radius($radius: 10px){
 
   border-radius: $radius;
   -moz-border-radius: $radius;
@@ -356,7 +366,7 @@ $column-spacing: 20px;
 /* My Module */
 
 .module{
-  @include border-radius(5px);
+  @include border-radius(0 5px 0 5px);
 }
 
 </code></pre>
@@ -496,6 +506,13 @@ $column-spacing: 20px;
 			<ul>
 				<li>Foundation Zurb</li>
 			</ul>
+		</li>
+		<li>
+			<h3>Pattern Library</h3>
+			<ul>
+				<li>Stitch CSS</li>
+			</ul>
+
 		</li>
 		<li>
 			<h3>Responsive Grids</h3>

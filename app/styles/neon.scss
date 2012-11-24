@@ -182,3 +182,23 @@
 	font-size: 0.8em;
 	margin-right: 20px;
 }
+
+
+.logo{
+	h1{ font-size: 141px !important; color: #f95a1b !important; position: relative !important; left: auto!important; right: auto !important; top: auto !important; text-transform: uppercase !important; font-family:"Arial Black"; text-shadow:none !important; margin: 20px 0 0 0 !important; line-height: 1; padding: 0 !important; padding-top: 10px; transform: inherit !important;}
+
+	h1 > span{
+		color: #000;
+		display: inline-block !important;
+		font-size: 96px !important;
+		margin-left: -80px;
+	}
+
+	h1 > em{
+		display: block;
+		font-style: normal;
+		font-size: 100px;
+		margin-top: -10px;
+		color: #fff
+	}
+}
