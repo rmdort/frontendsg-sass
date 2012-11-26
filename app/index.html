@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
 	<link href="styles/prettify.css" type="text/css" rel="stylesheet" />
+	<link href="styles/prism.css" type="text/css" rel="stylesheet" />
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
 	<link rel="stylesheet" href="styles/neon.css">
@@ -64,6 +65,7 @@
 	
   <foot>
     <a href="http://frontend.sg">http://frontend.sg</a>
+    <a href="http://twitter.com/frontendsg">#FrontendSG</a>
     <a href="http://twitter.com/frontendsg">@frontendsg</a>
   </foot>
 </section>
@@ -94,15 +96,9 @@
 
 	<div class="row">
 		<div class="columns six">
-			Photo
-		</div>
-		<div class="columns six">
 			<h3>Vinay</h3>
 			<p>Front-end developer at Artminister.com</p>
 			
-			<ul>
-			 <li>8 years of FED experience</li>
-			</ul>
 		</div>
 	</div>
 </section>
@@ -111,21 +107,58 @@
   <h2>Whats wrong with CSS?</h2>
   
   <div class="row">
-    <div class="columns three">
+    <div class="columns five">
       <ul>    
         <li>Copy/Paste and Repetitions</li>
         <li>Lack of good Moduralization</li>    
-        <li>A big Pile of mess</li>
+        <li>Large Projects - A big Pile of mess</li>
       </ul>
     </div>
-    <div class="columns nine">
-      <img src="https://www.shoeboxed.com/blog/wp-content/uploads/2012/10/messy-desk1.jpg" alt="" class="slide" style="height: 900px;">
+    <div class="columns seven">
+      <img src="/images/messy-room-1-1024x768.jpg" alt="" class="slide">
     </div>
   </div>
   
   
   
 </sections>
+
+<section class="slide">
+  <h2>CSS Pre-processors</h2>
+  
+  <h3>Modular CSS &rarr; Compiler &rarr; CSS</h3>
+  <div class="row">
+    <div class="columns five">
+      <ul>
+        <li>SASS - <a href="#">http://sass-lang.org</a>
+          <ul>
+            <li>Insanely powerful</li>
+            <li>Command Line + GUI</li>
+            <li>Large user-base</li>
+            <li>Ruby dependancy</li>
+          </ul>
+        </li>
+        <li>LESS - <a href="#">http://www.lesscss.org</a>
+          <ul>
+            <li>Both Javascript and CLI parser</li>
+            <li>Good for beginners</li>
+          </ul>
+        </li>
+        <li>Stylus - <a href="#">http://learnboost.github.com/stylus/</a>
+          <ul>
+            <li>NodeJS</li>
+            <li>Clean and concise code + Optional colons, semi colons, commas, braces etc</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="columns seven">
+      <img src="images/pre.png" alt="">
+    </div>
+  </div>
+  
+  
+</section>
 
 <section class="slide">
 	<h2>Syntanctically awesome stylesheets (Sass)</h2>
@@ -150,7 +183,7 @@
     	</ul>
     </div>
     <div class="columns eight">
-      <img src="http://www.macaucabletv.com/wp-content/uploads/2012/03/FM-you_don_t_mess_with_the_zohan03.jpg" alt="" style="height:700px;" class="slide">
+      <img src="http://www.macaucabletv.com/wp-content/uploads/2012/03/FM-you_don_t_mess_with_the_zohan03.jpg" alt=""  class="slide">
     </div>
   </div>
 	
@@ -162,7 +195,7 @@
 <p>Sass is dependent on Ruby.</p>
 	<h3>Installing Sass (Command Line)</h3>
 
-	<pre><code>$ gem install sass --pre // 3.2 alpha
+	<pre><code class="prettyprint">$ gem install sass --pre // 3.2 alpha
 $ sass --watch your_sass_directory
 </code></pre>
 
@@ -189,6 +222,10 @@ $ sass --watch your_sass_directory
 
 	<pre><code class="prettyprint">$ gem install compass
 
+// Create a new compass project
+
+$ compass create
+
 // In your sass file 
 
 @import "compass"	  
@@ -210,7 +247,7 @@ $ sass --watch your_sass_directory
 		<div class="columns four">
 			<h3>SASS (.sass)</h3>
 
-			<pre><code class="prettyprint lang-css">.module
+			<pre><code  class="language-css">.module
   color: #333
   font-weight: 500
   background: #fff
@@ -226,7 +263,7 @@ $ sass --watch your_sass_directory
 		<div class="columns four">
 			<h3>SCSS (.scss)</h3>
 
-			<pre><code class="prettyprint lang-css">.module{
+			<pre><code class="language-css">.module{
   color: #333;
   font-weight: 500;
   background: #fff;
@@ -242,7 +279,7 @@ $ sass --watch your_sass_directory
 		<div class="columns four">
 			<h3>CSS Output (.css)</h3>
 
-			<pre><code class="prettyprint lang-css">.module, .sidebar{
+			<pre><code class="language-css">.module, .sidebar{
   color: #333;
   font-weight: 500;
   background: #fff;
@@ -269,7 +306,7 @@ $ sass --watch your_sass_directory
 
 	
 		
-<pre><code class="prettyprint lang-css">$link-color: blue; 			
+<pre><code class="language-css">$link-color: blue; 			
 $site-width: 960px;
 $min-site-width: 768px;
 $max-site-width: 1040px;
@@ -295,7 +332,7 @@ $column-spacing: 20px;
 	<div class="row">
 		<div class="columns six">
 			<h3>Scss</h3>
-			<pre><code class="prettyprint">.module{
+			<pre><code class="language-css">.module{
   a{
     color: white;
     background: red;
@@ -327,7 +364,7 @@ $column-spacing: 20px;
 		</div>
 		<div class="columns six">
 			<h3>Css</h3>
-				<pre><code class="prettyprint">.module a {
+				<pre><code class="language-css">.module a {
   color: white;
   background: red;
   display: inline-block;
@@ -368,7 +405,7 @@ $column-spacing: 20px;
 	<div class="row">
 		<div class="columns six">
 			<h3>Scss</h3>
-			<pre><code class="prettyprint">.module{
+			<pre><code class="language-css">.module{
   
   width: 500px;
   float: left;
@@ -384,7 +421,7 @@ $column-spacing: 20px;
 		</div>
 		<div class="columns six">
 			<h3>CSS</h3>
-			<pre><code class="prettyprint">.module{
+			<pre><code class="language-css">.module{
   width: 500px;
   float: left;
 }
@@ -412,7 +449,7 @@ $column-spacing: 20px;
 
   		<h3>Scss</h3>
 
-  		<pre><code class="prettyprint">/* REM Font-size */
+  		<pre><code class="language-css">/* REM Font-size */
 
 @mixin border-radius($radius: 10px){
 
@@ -441,7 +478,7 @@ $column-spacing: 20px;
   	</div>
   	<div class="columns six">
   		<h3>CSS</h3>
-  		<pre><code class="prettyprint">/* My Module */
+  		<pre><code class="language-css">/* My Module */
 
 .module{
   border-radius: 0 5px 0 5px;
@@ -468,45 +505,9 @@ $column-spacing: 20px;
 </section>
 <!-- / Mixins -->
 
-<!-- Functions -->
-<section class="slide">
-	<h2>Functions</h2>
-  
-  <div class="row">
-  	<div class="columns six">
 
-  		<h3>Scss</h3>
 
-  		<pre><code class="prettyprint">/* Convert Pixels to REM (Given a base font size) */
 
-$base-font-size: 10px;
-
-@function pixel-to-rem($size: $base-font-size){  
-  @return $size/ ($base-font-size / 1rem);
-}
-
-/* Paragraph */
-
-p{  
-  font-size: pixel-to-rem(16px);
-}
-
-</code></pre>
-  		
-  	</div>
-  	<div class="columns six">
-  		<h3>CSS</h3>
-  		<pre><code class="prettyprint">/* Paragraph */
-
-p{
-  font-size: 1.6rem;
-}
-</code></pre>
-  	</div>
-  </div>
-
-</section>
-<!-- / Functions -->
 
 <section class="slide">
 	<h2>Extend</h2>
@@ -516,9 +517,9 @@ p{
 
   		<h3>Scss</h3>
 
-  		<pre><code class="prettyprint">/* Error */
+  		<pre><code class="language-css">/* Box with a border */
 
-.bordered_box{ 
+.make_a_box{ 
   border: 1px #ccc solid;
   padding: 10px;
 }  			
@@ -532,9 +533,9 @@ p{
 
   	<div class="columns six">
   		<h3>CSS</h3>
-  		<pre><code class="prettyprint">/* Error */
+  		<pre><code class="language-css">/* Box with a border */
 
-.bordered_box, .module {
+.make_a_box, .module {
   border: 1px #ccc solid;
   padding: 10px;
 }
@@ -555,56 +556,96 @@ p{
 
   		<h3>Scss</h3>
 
-  		<pre><code class="prettyprint">/* Error */
+  		<pre><code class="language-css">/* Placeholder markup (doesnt appear in CSS) */
 
-/* Presentational markup */
-
-%bordered_box{ 
+%make_a_box{ 
   border: 1px #ccc solid;
   padding: 10px;
 }
 
-/*  - Presentational markup */
+/*  - Module */
 
 .module{
-  @extend %bordered_box;
+  @extend %make_a_box;
   border-color: red;
+}
+
+
+/* News Module */
+
+.newsmodule{
+  @extend %make_a_box;
+  padding: 20px;
 }
   	</code></pre>
   	</div>
 
   	<div class="columns six">
   		<h3>CSS</h3>
-  		<pre><code class="prettyprint">/* Error */
+  		<pre><code class="language-css">/* Error */
 
-.module {
+.module, .newsmodule {
   border: 1px #ccc solid;
   padding: 10px;
 }
 
+/* Module */
+
 .module {
   border-color: red;
+}
+
+/* News Module */
+
+.newsmodule{
+  padding: 20px;
 }
 </code></pre>
   	</div>
 	</div>
 </section>
 
-
+<!-- Functions -->
 <section class="slide">
-	<h2>Sass 3.2 Whats New !!</h2>
+	<h2>Functions &amp; Operations</h2>
+  
+  <div class="row">
+  	<div class="columns six">
 
-	<ul>
-		<li>CSS 4 Selectors Support</li>
-		<li>Nested support for @media, @document, @supports, @keyframes
-			<pre><code class="prettyprint">.module{
-  @supports (display:flexbox){
-    display: flex;    
-  }
-}</code></pre>
-		</li>
-	</ul>
+  		<h3>Scss</h3>
+
+  		<pre><code class="language-css">/* Convert Pixels to REM (Given a base font size) */
+
+$base-font-size: 10px;
+
+@function pixel-to-rem($size: $base-font-size){  
+  @return $size/ ($base-font-size / 1rem);
+}
+
+/* Paragraph */
+
+p{  
+  font-size: pixel-to-rem(16px);
+}
+
+</code></pre>
+  		
+  	</div>
+  	<div class="columns six">
+  		<h3>CSS</h3>
+  		<pre><code class="language-css">/* Paragraph */
+
+p{
+  font-size: 1.6rem;
+}
+</code></pre>
+  	</div>
+  </div>
+
 </section>
+<!-- / Functions -->
+
+
 
 <section class="slide">
 	<h2>Debugging SASS</h2>
@@ -614,42 +655,55 @@ p{
 
 </section>
 
+<section class="slide">
+  <h2>Sass Goodies</h2>
+  <h3>Helper Functions - <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html</a></h3>
+  <img src="images/color.png" alt="">
+</section>
+
 
 <section class="slide">
 	<h2>Sass Goodies</h2>
-
-	<ul>
-		<li>
-			<h3>HTML Frameworks</h3>
-			<ul>
-				<li>Foundation Zurb</li>
-			</ul>
-		</li>
-		<li>
-			<h3>Pattern Library</h3>
-			<ul>
-				<li>Stitch CSS</li>
-			</ul>
-
-		</li>
-		<li>
-			<h3>Responsive Grids</h3>
-
-			Susy
-		</li>
-		<li>
-			Sassy Buttons
-		</li>
-	</ul>
-
+  <h3>HTML Framework - Foundation - <a href="http://foundation.zurb.com">http://foundation.zurb.com</a></h3>
+  <img src="images/foundation.png" alt="">
+  
+	
 
 </section>
 
 <section class="slide">
-	<h2>Folder Structure</h2>
+  <h2>Sass Goodies</h2>
+  <h3>Pattern Library - Stitch CSS  - <a href="http://stitchcss.com/">http://stitchcss.com/</a></h3>
+  <img src="images/stitch.png" alt="">
+</section>
 
+<section class="slide">
+  <h2>Sass Goodies</h2>
+  <h3>Responsive Grids</h3>
+  
+  <img src="images/susy.png" alt="">
+</section>
 
-	<h2>Imports &amp; Partials</h2>
+<section class="slide">
+  <h2>Sass Goodies</h2>
+  <h3>Sassy Buttons</h3>
+  <img src="images/sassy.png" alt="">
+</section>
+
+<section class="slide">
+	<h2>My Sass file structure</h2>	
+  <img src="images/sass-workflow.png" alt="">
+	
+</section>
+<sections class="slide">
+  <h2>My Sass file structure</h2>
+  <img src="images/folders.png" alt="">
+</sections>
+
+<section class="slide">
+  <h2>Note</h2>
+  
+  <h3>Imports &amp; Partials</h3>
 
 	<ul>
 		<li>CSS @imports - http requests</li>
@@ -657,8 +711,134 @@ p{
 	</ul>
 </section>
 
+
 <section class="slide">
-	<h2>Sass vs LESS</h2>
+	<h2>Sass 3.2 Whats New !!</h2>
+
+	<ul>
+		<li>CSS 4 Selectors Support</li>
+		<li>Silent Extends</li>
+		<li>Any number of arguments in the mixins</li>
+		<li>Nested Mixins</li>
+		<li>Nested support for @media, @document, @supports, @keyframes
+			<pre><code class="language-css">.module{
+  @supports (display:flexbox){
+    display: flex;    
+  }
+}</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Sass Pitfalls</h2>
+	
+	<ul>
+	 <li>
+	   <h3>Nesting Madness</h3>
+	 </li>
+	 <li>
+	   <h3>@mixins Everywhere - Use @extend</h3>
+	   <div class="row">
+     	<div class="columns three">
+
+     		<h3>Scss</h3>
+
+     		<pre><code class="language-css">/* Error */
+
+@mixin danger{
+ color: red;
+ background: white; 
+}
+
+/* Error */
+
+.error{
+ @include danger;
+}
+
+/* Strange Error */
+
+.strangeError{
+  @include danger;
+  border: 10px red solid;
+}
+</code></pre>
+
+     	</div>
+     	<div class="columns three">
+     		<h3>CSS</h3>
+     		<pre><code class="language-css">/* Error */
+
+.error {
+  color: red;
+  background: white;
+}
+
+/* Strange Error */
+
+.strangeError {
+  color: red;
+  background: white;
+  border: 10px red solid;
+}
+</code></pre>
+     	</div>
+     	<div class="columns three">
+     		<h3>Scss</h3>
+     		<pre><code class="language-css">/* Error - using @extend */
+
+%danger{
+ color: red;
+ background: white; 
+}
+
+.error{
+  @extend %danger;
+}
+
+/* Strange Error */
+
+.strangeError {
+  @extend %danger;
+  border: 10px red solid;
+}
+</code></pre>
+     	</div>
+     	<div class="columns three">
+     		<h3>CSS</h3>
+     		<pre><code class="language-css">/* Error - using @extend */
+
+.error, .strangeError {
+  color: red;
+  background: white;
+}
+
+.strangeError {
+  border: 10px red solid;
+}
+</code></pre>
+     	</div>
+     </div>
+	 </li>
+	 <li>
+	   <h3>No grouping of @media properties</h3>
+	 </li>
+	</ul>
+</section>
+
+<section class="slide">
+  <h2>Questions?</h2>
+  
+  <ul>
+    <li>Github: <a href="http://github.com/rmdort">http://github.com/rmdort</a></li>
+    <li>Twitter <a href="http://twitter.com/rmdort">@rmdort</a></li>
+  </ul>
+  
+  <foot>
+    <a href="http://frontend.sg">http://frontend.sg</a>
+    <a href="http://twitter.com/frontendsg">@frontendsg</a>
+  </foot>
 </section>
 
 <!-- End slides. -->
@@ -704,6 +884,7 @@ p{
 <script src="../extensions/navigation/deck.navigation.js"></script>
 <script src="../extensions/scale/deck.scale.js"></script>
 <script src="scripts/prettify.js"></script>
+<script src="scripts/prism.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>

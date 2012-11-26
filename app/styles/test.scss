@@ -1,8 +1,13 @@
-@function pixel-to-rem($size: 10px){
-  $base-font-size: 10px;
-  @return $size/ ($base-font-size / 1rem);
+danger{
+ color: red;
+ background: white; 
 }
 
-p{
-  font-size: pixel-to-rem(16px);
+.error{
+  @extend danger;
+}
+
+.strangeError{
+  @extend danger;
+  border: 10px red solid;
 }
