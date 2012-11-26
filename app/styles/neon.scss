@@ -185,35 +185,37 @@
 
 
 .logo{
-  padding-top:30px !important; text-align:center;
+  padding-top:15px !important; text-align:center;
   
-	h1{ font-size: 1000% !important; color: #25afad !important; position: relative !important; left: auto!important; right: auto !important; top: auto !important; text-transform: uppercase !important; font-family:"Arial Black"; text-shadow:none !important; margin: 20px auto 0 auto !important; line-height: 1; padding: 0 !important; padding-top: 10px; -webkit-transform: translate(0,0) !important; letter-spacing:-20px !important; -webkit-transition: all 0.2s ease-in; display:inline-block; text-align:center; }
+	h1{ font-size: 700% !important; color: #25afad !important; position: relative !important; left: auto!important; right: auto !important; top: auto !important; text-transform: uppercase !important; font-family:"Arial Black"; text-shadow:none !important; margin: 20px auto 0 auto !important; line-height: 1; padding: 0 !important; padding-top: 0px; -webkit-transform: translate(0,0) !important; letter-spacing:-20px !important; -webkit-transition: all 0.2s ease-in; display:inline-block; text-align:center; }
 
 	h1  span{
 		color: #fff !important;
 		display: inline-block !important;
-		font-size: 68% !important;
-		margin-left: -120px;
+		font-size: 60% !important;
+		margin-left: -70px;
+		letter-spacing: -5px !important;
 	}
 	
 	h1 > b{
 	  position:absolute;
-	  right:20px;
-	  top:48px;
-	  font-size: 45px !important;
-	  letter-spacing:-1px !important;
+	  right:-0px;
+	  top:32px;
+	  font-size: 35px !important;
+	  letter-spacing:-2px !important;
 	  color:#999;
 	}
 
 	h1 > em{
 		display: block;
 		font-style: normal;
-		font-size: 70%;
+		font-size: 64%;
 		margin-left:4px;
-		margin-top: -50px;
+		margin-top: -30px;
 		color: #777;
 		-webkit-text-stroke: 1px #999;
-		letter-spacing: -14px !important;
+		letter-spacing: -5px !important;
+		line-height: 1;
 	}
 }
 
