@@ -5,13 +5,13 @@
 	background:#000;
 
 	.slide {
-		background:#000;
-
+		background:#000;		
 		h1 {
-			color:#0af;
+			color:#0af;			
 			font-weight:normal;
 			font-weight:100;
 			text-shadow:0 0 50px #0af, 0 0 3px #fff;
+			line-height: 1;
 		}
 
 		h1 span{
@@ -23,11 +23,12 @@
 
 		h1 strong{
 			font-size: 0.6em;
-			background:#fff;
-			color: #000;
+			line-height: 1;
+			color: rgba(255,255,255,0.8);
+
 			display: block;
 			position:absolute !important;
-			top: -220px !important;
+			top: -180px !important;
 			width: 60%;
 			margin: 0 auto;
 			left: 50% !important;
@@ -37,6 +38,7 @@
 
 		h2 {
 			color:#af0;
+			
 			border-bottom-color:#ccc;
 			font-weight:normal;
 			font-weight:100;
@@ -135,6 +137,8 @@
 
 	.deck-status {
 		font-size:0.6666em;
+
+		a{float: left; margin-right: 20px;}
 	}
 
 	.goto-form {
@@ -199,11 +203,12 @@
 	
 	h1 > b{
 	  position:absolute;
-	  right:-0px;
+	  right:0px;
 	  top:32px;
 	  font-size: 35px !important;
 	  letter-spacing:-2px !important;
 	  color:#999;
+	  
 	}
 
 	h1 > em{
@@ -221,6 +226,7 @@
 
 .slide foot{
   position:fixed;
+  z-index: 1000;
   left:0;
   bottom:0;
   background:#222;
@@ -229,7 +235,7 @@
   -webkit-box-sizing: border-box;
   width:100%;
   text-align:right;
-  
+  -webkit-transform: scale(1) !important;
   > a:first-child{
     float:left;
   }

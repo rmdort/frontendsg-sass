@@ -1,13 +1,17 @@
-danger{
- color: red;
- background: white; 
+.module{
+  width: 500px;
+  float: left;
+
+  @media only screen and (max-width: 480px){
+    width: auto;
+    float: none;
+  }
 }
 
-.error{
-  @extend danger;
-}
+header{
+  height: 200px;
 
-.strangeError{
-  @extend danger;
-  border: 10px red solid;
+  @media only screen and (max-width: 480px){
+    height: auto;
+  }
 }

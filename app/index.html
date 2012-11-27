@@ -43,7 +43,7 @@
 
 	<!--<img src="images/front-end-logo.png" width="500" alt="">-->
 	
-	<div style="width:50%; margin: 20px auto; ">
+	<div style="width:70%; margin: 10px auto 0 auto; ">
 	
 <h2 style="text-align:center;">What's on tonight!</h2>
 	<ul>		
@@ -58,16 +58,13 @@
 		</li>
 		<li>
 			<h6>Lightning Talk - Lakshan Perera</h6>
+      <br>
 		</li>
 	</ul>
 
 	</div>
 	
-  <foot>
-    <a href="http://frontend.sg">http://frontend.sg</a>
-    <a href="http://twitter.com/frontendsg">#FrontendSG</a>
-    <a href="http://twitter.com/frontendsg">@frontendsg</a>
-  </foot>
+  
 </section>
 
 <section class="slide">
@@ -76,14 +73,12 @@
   <ul>
     <li>Monthly Meetups</li>
     <li>Sharing Sessions + Talks</li>
-    <li>Open to all who are interested in front-end technology
-      <ul>
-        <li>Front-end & Back-end Developers</li>
-        <li>UI/UX Designers</li>        
-        <li>.....</li>
-      </ul>
-      </li>
+    <li>Open to anyone who is interested in front-end technology</li>
   </ul>
+
+  <p>Website: <a href="http://frontend.sg">http://frontend.sg</a></p>  
+  <p>Twitter: <a href="http://twitter.com/frontendsg">@frontendsg</a></p>
+  <p>HashTag: <a href="http://twitter.com/frontendsg">#FrontendSG</a></p>
 </section>
 
 <section class="slide" id="intro">
@@ -92,30 +87,30 @@
 </section>
 
 <section class="slide">
-	<h2>Who am I?</h2>
+	<h2>Who am I</h2>
 
 	<div class="row">
-		<div class="columns six">
-			<h3>Vinay</h3>
-			<p>Front-end developer at Artminister.com</p>
-			<p>Expression Engine Developer</p>
+		<div class="columns ten">
+			<h3>Vinay M</h3>
+			<p>Front-end developer at <a href="">Artminister.com</a></p>			
 		</div>
 	</div>
 </section>
 
 <sections class="slide">
-  <h2>Whats wrong with CSS?</h2>
+  <h2>Limitations of CSS</h2>
   
   <div class="row">
     <div class="columns five">
       <ul>    
-        <li>Copy/Paste and Repetitions</li>
-        <li>Lack of good Moduralization</li>    
-        <li>Large Projects - A big Pile of mess</li>
+        <li>Repetitions</li>
+        <li>Lack of good Moduralization</li>   
+        <li>Browser prefixes</li> 
+        <li>Large Projects - messy</li>
       </ul>
     </div>
     <div class="columns seven">
-      <img src="/images/messy-room-1-1024x768.jpg" alt="" class="slide">
+      <img src="/images/iStock_000016169777Small722.jpg" alt="" class="slide">
     </div>
   </div>
   
@@ -128,11 +123,10 @@
   
   <h3>Modular CSS &rarr; Compiler &rarr; CSS</h3>
   <div class="row">
-    <div class="columns five">
+    <div class="columns six">
       <ul>
         <li>SASS - <a href="#">http://sass-lang.org</a>
-          <ul>
-            <li>Insanely powerful</li>
+          <ul>            
             <li>Command Line + GUI</li>
             <li>Large user-base</li>
             <li>Ruby dependancy</li>
@@ -152,7 +146,7 @@
         </li>
       </ul>
     </div>
-    <div class="columns seven">
+    <div class="columns six">
       <img src="images/pre.png" alt="">
     </div>
   </div>
@@ -164,26 +158,29 @@
 	<h2>Syntanctically awesome stylesheets (Sass)</h2>
   
   <div class="row">
-    <div class="columns four">
+    <div class="columns seven">
       <h3>Why Sass.</h3>
     	<ul>
     		<li>Faster to write than normal CSS</li>
     		<li>DRY</li>
-    		<li>Browser prefixes</li>
+    		<li>Mixins to manage code blocks</li>
     		<li>Mininal and Maintainable code</li>
     	</ul>
 
-    	<h3>Supports</h3>
-    	<ul>
-    		<li>Nesting</li>
-    		<li>Variables</li>
-    		<li>Mixins</li>
-    		<li>Extends</li>
-    		<li>Functions &amp; Operations</li>
-    	</ul>
+    	
     </div>
-    <div class="columns eight">
-      <img src="http://www.macaucabletv.com/wp-content/uploads/2012/03/FM-you_don_t_mess_with_the_zohan03.jpg" alt=""  class="slide">
+    <div class="columns five">
+
+      <h3>Supports</h3>
+      <ul>
+        <li>Nesting</li>
+        <li>Variables</li>
+        <li>Mixins</li>
+        <li>Extends</li>
+        <li>Functions &amp; Operations</li>
+      </ul>
+
+      <!--<img src="http://www.macaucabletv.com/wp-content/uploads/2012/03/FM-you_don_t_mess_with_the_zohan03.jpg" alt=""  class="slide">-->
     </div>
   </div>
 	
@@ -237,6 +234,7 @@ $ compass create
 <p>
 	<a href="http://livereload.com">http://livereload.com</a>
 </p>
+
 </section>
 
 <section class="slide">
@@ -308,14 +306,11 @@ $ compass create
 		
 <pre><code class="language-css">$link-color: blue; 			
 $site-width: 960px;
-$min-site-width: 768px;
-$max-site-width: 1040px;
-$column-spacing: 20px;
+$gutter: 20px;
 
 .container{
   width: $site-width;
-  max-width: $max-site-width;
-  min-width: $min-site-width;	
+  padding: $gutter;
 }
 
 .sidebar a{
@@ -449,7 +444,7 @@ $column-spacing: 20px;
 
   		<h3>Scss</h3>
 
-  		<pre><code class="language-css">/* REM Font-size */
+  		<pre><code class="language-css">/* Border radius */
 
 @mixin border-radius($radius: 10px){
 
@@ -519,13 +514,13 @@ $column-spacing: 20px;
 
   		<pre><code class="language-css">/* Box with a border */
 
-.make_a_box{ 
+.this_is_a_box{ 
   border: 1px #ccc solid;
   padding: 10px;
 }  			
 
 .module{
-  @extend .bordered_box;
+  @extend .this_is_a_box;
   border-color: red;
 }
   	</code></pre>
@@ -535,7 +530,7 @@ $column-spacing: 20px;
   		<h3>CSS</h3>
   		<pre><code class="language-css">/* Box with a border */
 
-.make_a_box, .module {
+.this_is_a_box, .module {
   border: 1px #ccc solid;
   padding: 10px;
 }
@@ -558,7 +553,7 @@ $column-spacing: 20px;
 
   		<pre><code class="language-css">/* Placeholder markup (doesnt appear in CSS) */
 
-%make_a_box{ 
+%this_is_a_box{ 
   border: 1px #ccc solid;
   padding: 10px;
 }
@@ -566,17 +561,10 @@ $column-spacing: 20px;
 /*  - Module */
 
 .module{
-  @extend %make_a_box;
+  @extend %this_is_a_box;
   border-color: red;
 }
 
-
-/* News Module */
-
-.newsmodule{
-  @extend %make_a_box;
-  padding: 20px;
-}
   	</code></pre>
   	</div>
 
@@ -584,7 +572,7 @@ $column-spacing: 20px;
   		<h3>CSS</h3>
   		<pre><code class="language-css">/* Error */
 
-.module, .newsmodule {
+.module {
   border: 1px #ccc solid;
   padding: 10px;
 }
@@ -595,11 +583,6 @@ $column-spacing: 20px;
   border-color: red;
 }
 
-/* News Module */
-
-.newsmodule{
-  padding: 20px;
-}
 </code></pre>
   	</div>
 	</div>
@@ -650,16 +633,11 @@ p{
 <section class="slide">
 	<h2>Debugging SASS</h2>
 
-	<h3>Demo: Chrome Canary</h3>
+	<h3>Demo: Chrome</h3>
 
 
 </section>
 
-<section class="slide">
-  <h2>Sass Goodies</h2>
-  <h3>Helper Functions - <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html</a></h3>
-  <img src="images/color.png" alt="">
-</section>
 
 
 <section class="slide">
@@ -679,14 +657,14 @@ p{
 
 <section class="slide">
   <h2>Sass Goodies</h2>
-  <h3>Responsive Grids</h3>
+  <h3>Susy - Responsive Grids - <a href="http://susy.oddbird.net/">http://susy.oddbird.net/</a></h3>
   
   <img src="images/susy.png" alt="">
 </section>
 
 <section class="slide">
   <h2>Sass Goodies</h2>
-  <h3>Sassy Buttons</h3>
+  <h3>Sassy Buttons - <a href="http://jaredhardy.com/sassy-buttons/">http://jaredhardy.com/sassy-buttons/</a></h3>
   <img src="images/sassy.png" alt="">
 </section>
 
@@ -714,18 +692,23 @@ p{
 
 <section class="slide">
 	<h2>Sass 3.2 Whats New !!</h2>
-
+<p>
+  <a href="http://chriseppstein.github.com/blog/2012/08/23/sass-3-2-is-released/">http://chriseppstein.github.com/blog/2012/08/23/sass-3-2-is-released/</a>
+</p>
 	<ul>
 		<li>CSS 4 Selectors Support</li>
-		<li>Silent Extends</li>
-		<li>Any number of arguments in the mixins</li>
+		<li>Silent Extends</li>		
 		<li>Nested Mixins</li>
-		<li>Nested support for @media, @document, @supports, @keyframes
-			<pre><code class="language-css">.module{
-  @supports (display:flexbox){
-    display: flex;    
-  }
-}</code></pre>
+		<li>Pass a list of arguments to mixins
+			<pre><code class="language-css">@mixin base_module($color, $backgrounds...){
+  background: $backgrounds;
+  color: $color;
+}
+
+.module{
+  @include base_module(white, url(image1.jpg), url(image1.jpg));
+}
+</code></pre>
 		</li>
 	</ul>
 </section>
@@ -739,93 +722,59 @@ p{
 	 </li>
 	 <li>
 	   <h3>@mixins Everywhere - Use @extend</h3>
-	   <div class="row">
-     	<div class="columns three">
+	   <li>
+       <h3>No grouping of @media properties</h3>
+  <div class="row">
+    <div class="columns six">
+<pre><code class="language-css">.module{
+  width: 500px;
+  float: left;
 
-     		<h3>Scss</h3>
-
-     		<pre><code class="language-css">/* Error */
-
-@mixin danger{
- color: red;
- background: white; 
+  @media only screen and (max-width: 480px){
+    width: auto;
+    float: none;
+  }
 }
 
-/* Error */
+header{
+  height: 200px;
 
-.error{
- @include danger;
+  @media only screen and (max-width: 480px){
+    height: auto;
+  }
+}
+</code>      
+    </div>
+    <div class="columns six">
+<pre><code class="language-css">.module {
+  width: 500px;
+  float: left;
 }
 
-/* Strange Error */
-
-.strangeError{
-  @include danger;
-  border: 10px red solid;
-}
-</code></pre>
-
-     	</div>
-     	<div class="columns three">
-     		<h3>CSS</h3>
-     		<pre><code class="language-css">/* Error */
-
-.error {
-  color: red;
-  background: white;
+@media only screen and (max-width: 480px) {
+  .module {
+    width: auto;
+    float: none;
+  }
 }
 
-/* Strange Error */
-
-.strangeError {
-  color: red;
-  background: white;
-  border: 10px red solid;
-}
-</code></pre>
-     	</div>
-     	<div class="columns three">
-     		<h3>Scss</h3>
-     		<pre><code class="language-css">/* Error - using @extend */
-
-%danger{
- color: red;
- background: white; 
+header {
+  height: 200px;
 }
 
-.error{
-  @extend %danger;
-}
-
-/* Strange Error */
-
-.strangeError {
-  @extend %danger;
-  border: 10px red solid;
-}
-</code></pre>
-     	</div>
-     	<div class="columns three">
-     		<h3>CSS</h3>
-     		<pre><code class="language-css">/* Error - using @extend */
-
-.error, .strangeError {
-  color: red;
-  background: white;
-}
-
-.strangeError {
-  border: 10px red solid;
-}
-</code></pre>
-     	</div>
-     </div>
+@media only screen and (max-width: 480px) {
+  header {
+    height: auto;
+  }
+}</code></pre>      
+    </div>
+  </div>
+     </li>
 	 </li>
-	 <li>
-	   <h3>No grouping of @media properties</h3>
-	 </li>
+	 
 	</ul>
 </section>
+
 
 <section class="slide">
   <h2>Questions?</h2>
@@ -835,10 +784,7 @@ p{
     <li>Twitter <a href="http://twitter.com/rmdort">@rmdort</a></li>
   </ul>
   
-  <foot>
-    <a href="http://frontend.sg">http://frontend.sg</a>
-    <a href="http://twitter.com/frontendsg">@frontendsg</a>
-  </foot>
+  
 </section>
 
 <!-- End slides. -->
@@ -852,6 +798,7 @@ p{
 
 <!-- deck.status snippet -->
 <p class="deck-status">
+  
 	<span class="deck-status-current"></span>
 	/
 	<span class="deck-status-total"></span>
